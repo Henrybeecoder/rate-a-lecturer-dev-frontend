@@ -1,0 +1,322 @@
+.singleRateBox {
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(228, 228, 228);
+    border-radius: 6px;
+    box-shadow: rgba(126, 126, 126, 0.25) 0px 4px 4px;
+    padding: 24px 28px 20px;
+    text-align: left;
+    margin: 10px;
+}
+
+.newRateBox {
+    margin-top: 100px !important;
+}
+
+.singleRateBox h2 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    margin-bottom: 16px;
+}
+
+.singleRateBox sup {
+    color: rgb(255, 89, 89);
+}
+
+.rateBox {
+    display: flex;
+    flex-direction: row-reverse;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.firstElement {
+    background-color: rgb(228, 228, 228);
+    height: 40px;
+    opacity: 0.5;
+    touch-action: none;
+    transition: all 200ms ease-in-out 0s;
+    width: 60px;
+    border-radius: 20px 0px 0px 20px;
+    border-right: 3px solid white;
+}
+
+.secondElement, .thirdElement, .forthElement {
+    background-color: rgb(228, 228, 228);
+    height: 40px;
+    opacity: 0.5;
+    touch-action: none;
+    transition: all 200ms ease-in-out 0s;
+    width: 60px;
+    border-right: 3px solid white;
+
+}
+
+.fifthElement {
+    background-color: rgb(228, 228, 228);
+    height: 40px;
+    opacity: 0.5;
+    touch-action: none;
+    transition: all 200ms ease-in-out 0s;
+    width: 60px;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.firstElement:hover {
+    background-color: rgb(235, 87, 87);
+    opacity: 0.7;
+}
+
+.secondElement:hover {
+    background-color: rgb(242, 153, 74);
+    opacity: 0.7;
+}
+
+.secondElement:hover ~ .firstElement, 
+.thirdElement:hover ~ .firstElement,
+.forthElement:hover ~ .firstElement,
+.fifthElement:hover ~ .firstElement {
+    background-color: rgb(235, 87, 87);
+    opacity: 0.7;
+}
+
+.thirdElement:hover {
+    background-color: rgb(242, 201, 76);
+    opacity: 0.7;
+}
+
+.thirdElement:hover ~ .secondElement, 
+.forthElement:hover ~ .secondElement,
+.fifthElement:hover ~ .secondElement {
+    background-color: rgb(242, 153, 74);
+    opacity: 0.7;
+}
+
+.forthElement:hover {
+    background-color: rgb(142, 207, 111);
+    opacity: 0.7;
+}
+
+.forthElement:hover ~ .thirdElement,
+.fifthElement:hover ~ .thirdElement {
+    background-color: rgb(242, 201, 76);
+    opacity: 0.7;
+}
+
+.fifthElement:hover {
+    background-color: rgb(33, 150, 83);
+    opacity: 0.7;
+}
+
+.fifthElement:hover ~ .forthElement {
+    background-color: rgb(142, 207, 111);
+    opacity: 0.7;
+}
+
+.firstElementActive, 
+.secondElementActive, 
+.thirdElementActive, 
+.forthElementActive, 
+.fifthElementActive {
+    opacity: 1;
+}
+
+.firstElementActive {
+    background-color: rgb(235, 87, 87);
+}
+
+.secondElementActive {
+    background-color: rgb(242, 153, 74);
+}
+
+.thirdElementActive {
+    background-color: rgb(242, 201, 76);
+}
+
+.forthElementActive {
+    background-color: rgb(142, 207, 111);
+}
+
+.fifthElementActive {
+    background-color: rgb(33, 150, 83);
+}
+
+.rateBoxStatus {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    margin: 5px 30px 5px 450px;
+}
+.rateBoxStatus p {
+    color: rgb(158, 158, 158);
+    font-size: 16px;
+    transition: opacity 200ms ease-out 0s;
+}
+
+.dynamicStatus {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+    transition: opacity 200ms ease-out 0s;
+}
+
+.inputContainer input {
+    -webkit-box-align: center;
+    align-items: center;
+    appearance: none;
+    border: 2px solid rgb(158, 158, 158);
+    border-radius: 50%;
+    display: flex;
+    height: 44px;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin: 0px 0px 8px;
+    opacity: 0.5;
+    width: 44px;
+}
+
+.inputContainer .yesCheck:checked {
+    opacity: 1;
+    background: rgb(142, 207, 111);
+    border: unset;
+}
+
+.inputContainer .noCheck:checked {
+    opacity: 1;
+    background: rgb(235, 87, 87);
+    border: unset;
+}
+
+
+
+.inputContainer .yesCheck:checked::before {
+    background-size: cover;
+    content: "";
+    display: flex;
+    height: 15px;
+    width: 20px;
+    background-image: url("https://ratemyprofessors.com/static/media/checkmark-clear.cd53f0c8.svg");
+}
+
+.inputContainer .noCheck:checked::before {
+    background-size: cover;
+    content: "";
+    display: flex;
+    height: 15px;
+    width: 15px;
+    background-image: url("https://www.ratemyprofessors.com/static/media/close-icon-white.73f4fc82.svg");
+}
+
+
+.inputBoxFlex {
+    display: flex;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.inputContainer {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 32px;
+    max-width: 44px;
+    text-align: center;
+}
+
+.guideLinesText {
+    display: flex;
+}
+
+.guideLinesText h4 {
+    font-weight: 700;
+    margin-left: 5px;
+}
+
+.guideLineBox {
+    background: rgb(247, 247, 247);
+    border-radius: 3px;
+    padding: 30px 10px;
+    margin-bottom: 10px;
+}
+
+.viewLink {
+    text-decoration: underline;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.newInput {
+    border: 1px solid rgb(209, 209, 209);
+    border-radius: 5px;
+    font-family: Helvetica, arial;
+    font-size: 16px;
+    outline: none;
+    padding: 16px 16px 120px 16px;
+    resize: none;
+    width: 100%;
+}
+
+.guideLineBox ul {
+   margin: 10px 0;
+}
+
+.guideLineBox ul li {
+    padding-left: 20px;
+}
+
+.fixedHeader {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100px;
+ 
+    margin-top: 60px;
+
+    background: white;
+    box-shadow: rgba(126, 126, 126, 0.25) 0px 4px 4px;
+    z-index: 999999;
+}
+
+.fixedHeaderContainer {
+    width: 100%;
+    height: 100%;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.fixedHeaderContainer h2 {
+    color: rgb(21, 21, 21);
+    font-size: 1.5rem;
+}
+
+.fixedHeaderContainer p {
+    margin-top: 20px;
+}
+
+.fixedHeaderContainer span {
+    text-decoration: underline;
+}
+
+.subContainer button {
+    background: black;
+    color: white;
+    padding: 5px 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+    .rateBoxStatus {
+        width: 100%;
+        margin: 0;
+    }
+
+    .rateBoxStatus p {
+        font-size: 14px;
+    }
+}
