@@ -17,7 +17,7 @@ const Footer = () => {
 
         {
             !show ? (
-                  <div className="w-full bg-black text-white py-4 flex justify-center items-center" ref={parent}> 
+                  <div className="flex items-center justify-center w-full py-4 text-white bg-black" ref={parent}> 
          {/* main  */}
          <div className="w-[90%] h-full justify-center items-center flex flex-col"> 
              {/* dropdown  */}
@@ -37,8 +37,8 @@ const Footer = () => {
         </div> 
 
          {/* first footer  */}
-         <div className="flex justify-between w-full items-center headerMedium:flex-col-reverse headerMedium:items-center headerMedium:ml-3">
-            <div className="text-[13px] text-center">© 2023 Altice USA News, Inc. All Rights Reserved</div>
+         <div className="flex items-center justify-between w-full headerMedium:flex-col-reverse headerMedium:items-center headerMedium:ml-3">
+            <div className="text-[13px] text-center">© 2023 Rate My Lecturer. All Rights Reserved</div>
             <div className="flex text-[23px] justify-between items-center headerMedium:flex-col-reverse">
                     <div  className="flex w-[100px] justify-between">
                         <BiLogoFacebookSquare />
@@ -47,7 +47,8 @@ const Footer = () => {
                     </div>
 
                     <div className="ml-5 headerMedium:ml-0">
-                    <img src={pics} alt="logo" className="h-[43px]"/>
+                    {/* <img src={pics} alt="logo" className="h-[43px]"/> */}
+                    <h2 className="cursor-pointer">RML</h2>
                     </div>
             </div>
         </div> 
@@ -56,7 +57,7 @@ const Footer = () => {
          </div> 
      </div> 
             ) : (
-               <div className="w-full bg-black text-white py-4 flex justify-center items-center" ref={parent}>
+               <div className="flex items-center justify-center w-full py-4 text-white bg-black" ref={parent}>
          {/* main  */}
         <div className="w-[90%] h-full justify-center items-center flex flex-col">
              {/* dropdown  */}
@@ -110,7 +111,7 @@ const Footer = () => {
                         <BiLogoTwitter />
                         <BiLogoInstagram />
 </div>
-            <div className="text-[14px] text-center">© 2023 Altice USA News, Inc. All Rights Reserved</div>
+            <div className="text-[14px] text-center">© 2023 Rate My Lecturer. All Rights Reserved</div>
         </div>
         </div>
 

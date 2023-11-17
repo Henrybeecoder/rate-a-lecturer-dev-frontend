@@ -1,3 +1,6 @@
+//@ts-ignore
+//@ts-nocheck
+
 import pics from "../../assets/rmp 2.svg";
 import pics2 from "../../assets/apple logo.svg";
 import pics3 from "../../assets/dropdown main.svg";
@@ -134,7 +137,8 @@ console.log(profileInput);
             {/* logo */}
 {
   !search ? (
-    <img className="mr-12" src={pics} alt="logo" onClick={() => navigate("/")}/>
+    // <img className="mr-12" src={pics} alt="logo" onClick={() => navigate("/")}/>
+    <h2 className="font-900" onClick={() => navigate("/")}>RML</h2>
   ) : null
 }
          
@@ -297,7 +301,7 @@ console.log(profileInput);
                         value={inputValue}
                         onKeyPress={handleKeyPress}
                         onChange={(e) => setInputValue(e.target.value)}
-                        placeholder="Enter your Professor name"
+                        placeholder="Enter your Lecturer name"
                         className="w-[750px] h-[40px] rounded-full px-5 outline-none smallLaptop:w-[740px]"
                       />
                     </div>

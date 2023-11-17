@@ -5,6 +5,9 @@ import { useState, useEffect , CSSProperties} from "react"
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
 import LoadingScreen from "../../components/LoadingScreen"
+import {LiaSadTearSolid} from "react-icons/lia"
+import { IconContext } from "react-icons"
+
 
 
 
@@ -47,22 +50,22 @@ const codeToStatus: (code: any) => {
     : code === 2
     ? {
        
-        style: { backgroundColor: "rgb(255, 156, 156)", color: "#36B44A" },
+        style: { backgroundColor: "rgb(255, 156, 156)", color: "rgb(21, 21, 21)" },
       }
-      : code === 3
+      : code === 3 < 4
     ? {
        
-        style: { backgroundColor: "rgb(255, 241, 112)", color: "#36B44A" },
+        style: { backgroundColor: "rgb(255, 241, 112)", color: "rgb(21, 21, 21)" },
       }
       : code === 4
     ? {
       
-        style: { backgroundColor: "#73c5e6", color: "#36B44A" },
+        style: { backgroundColor: "#73c5e6", color: "rgb(21, 21, 21)" },
       }
-    : code === 5
+    : code == 5
     ? {
      
-        style: { backgroundColor: "rgb(127, 246, 195)", color: "#CD2B65" },
+        style: { backgroundColor: "rgb(127, 246, 195)", color: "rgb(21, 21, 21)" },
       }
     : {
         text: "In Progress",
@@ -95,7 +98,9 @@ const codeToStatus: (code: any) => {
         </div> */}
 
         {/*profs Data  */}
-        {allProfessors?.map((list) => {
+        {allProfessors?.length > 0 ? (
+          <>
+            {allProfessors?.map((list) => {
           return (
             <div 
             className="flex justify-between w-full bg-[#F7F7F7] h-[170px] headerMedium:h-full items-center mt-8 px-6 py-4 cursor-pointer"
@@ -106,11 +111,12 @@ const codeToStatus: (code: any) => {
                     <div className="font-[500] ml-3">Quality</div>
                     <div 
                     className="w-[80px] h-[60px] flex justify-center items-center font-[700] text-[30px] mb-2"
-                    style={codeToStatus(list.__v).style}
+                    style={codeToStatus(list.averageRate).style}
                     >
-                      {`${list.__v}.0`}
+                      {console.log(list.averageRate?.toString()?.length, "my length")}
+                      {`${list.averageRate === null ? 0 : list.averageRate}${list.averageRate?.toString()?.length < 2 ? ".0" : ""}`}
                       </div>
-                    <div className="text-[14px] ">0 ratings</div>
+                    <div className="text-[14px] ">{`${list.ratings.length} ratings`}</div>
                 </div>
 
                 <div>
@@ -141,6 +147,23 @@ const codeToStatus: (code: any) => {
       </div>
           )
         })}
+          </>
+        ) : (
+          <div className="flex flex-col items-center justify-center w-full">
+            <IconContext.Provider
+                                value={{ color: 'black', size: '100px' }}
+                            >
+                                       <LiaSadTearSolid />
+                               
+                            </IconContext.Provider>
+   
+
+     
+            <h2 className="text-[30px] font-bold">Opps!! No Lecturer Found</h2>
+            <p className="underline cursor-pointer" onClick={() => navigate("/prof/signup")}>Add a professor instead</p>
+          </div>
+        )}
+      
       
 
         
